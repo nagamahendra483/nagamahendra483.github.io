@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAR RENTAL MANAGEMENT</title>
+  <link href="Car_Rental.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="./script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-card">
+      <a class="w3-bar-item nav-padding w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+        onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a class="logo" href="./index.html"><img src="./logo1.png" alt="logo"></a>
+      <a href="./index.html" class="w3-bar-item nav-padding w3-hide-small">HOME</a>
+      <a href="./Introduction.html" class="w3-bar-item nav-padding w3-hide-small">INTRODUCTION</a>
+      <a href="./Contact us.html" class="w3-bar-item nav-padding w3-hide-small active">CONTACT US</a>
+      <a href="./Login_Registration.html" class="w3-bar-item nav-padding w3-hide-small">LOGIN/REGISTRATION</a>
+      <a href="./About us.html" class="w3-bar-item nav-padding w3-hide-small">ABOUT US</a>
+      <a href="./privacy_policy.html" class="w3-bar-item nav-padding w3-hide-small">PRIVACY POLICY</a>
+    </div>
+  </div>
+
+  <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a href="./index.html" class="w3-bar-item w3-padding-large" onclick="myFunction()">HOME</a>
+    <a href="./Introduction.html" class="w3-bar-item w3-padding-large" onclick="myFunction()">INTRODUCTION</a>
+    <a href="./Contact us.html" class="w3-bar-item w3-padding-large active" onclick="myFunction()">CONTACT US</a>
+    <a href="./Login_Registration.html" class="w3-bar-item w3-padding-large" onclick="myFunction()">LOGIN/REGISTRATION</a>
+    <a href="./About us.html" class="w3-bar-item w3-padding-large" onclick="myFunction()">ABOUT US</a>
+    <a href="./privacy_policy.html" class="w3-bar-item w3-padding-large" onclick="myFunction()">PRIVACY
+      POLICY</a>
+  </div>
+
+  <div class="image_home">
+    <img class="home_image" src="./contactus.jpg" alt="contact-image">
+  </div>
+
+  <div class="w3-content body_wrapper">
+    <h2 class="center_heading">Contact Us</h2>
+    <div class="form_contactus">
+      <form name="myForm" action="#" method="GET" onsubmit="return validateForm()">
+        <fieldset>
+
+          <p>
+            <label for="name" class="required"><span class="logo_social_name"></span>Name</label>
+            <input class="w3-input" type="text" id="name" name="name" required>
+          </p>
+          <p>
+            <label for="email" class="required"><span class="logo_social_email1"></span>Email</label>
+            <input class="w3-input" type="email" id="email" name="email" required>
+          </p>
+          <p>
+            <label for="subject" class="required"><span class="logo_social_subject"></span>Subject</label>
+            <input class="w3-input" type="text" id="subject" name="subject" required>
+          </p>
+          <p>
+            <label for="message" class="required"><span class="logo_social_message"></span>Message</label>
+            <textarea class="w3-input" id="message" name="message" required></textarea>
+          </p>
+          <p>
+            <input class="w3-input submit_button_contactus" type="submit" value="Submit">
+          </p>
+        </fieldset>
+      </form>
+    </div>
+    <div class="contact_content">
+      <h2>Purpose of the contact form</h2>
+      <p>Sometimes, the simplest approach is the best approach.Our Contact us page has a warm feeling.Our support
+        staff
+        is happy to assist you in all possible ways.
+        Please fill out and submit the form above or below are the other ways you can get ib touch with us , if you want
+        to make a request for information. Our staff will
+        be in
+        touch with you soon.</p>
+    </div>
+    <div class="description_contactus">
+      <h2 class="get_touch_heading">Get in touch !</h2>
+      <ul class="contact_other">
+       <address>
+        <li>
+          <div class="logo_social_phone"></div><br>
+          <b>Phone</b><br>
+          <p><a href="tel:+1(913)-456-7890">
+              +1(405)-916-6781
+            </a></p>
+        </li>
+       </address>
+
+        <address>
+        <li>
+          <div class="logo_social_email"></div><br>
+            <b>Email-Id</b>
+          <br>
+          <footer>
+          <p><a href="mailto:japaneseculture@gmail.com">carzz.rental@gmail.com
+            </a></p>
+          </footer>
+        </li>
+        </address>
+        <address>
+        <li>
+          <div class="logo_social_address"></div><br>
+          <b>Address</b><br>
+          <p>1920 E 2<sup>nd</sup>Street, Edmond, OK, 73034</p>
+        </li>
+        </address>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

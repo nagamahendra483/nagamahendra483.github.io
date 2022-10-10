@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CAR RENTAL MANAGEMENT</title>
+    <link href="Car_Rental.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-card">
+            <a class="w3-bar-item nav-padding w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+                onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a class="logo" href="./index.html"><img src="./logo1.png" alt="logo"></a>
+            <a href="./index.html" class="w3-bar-item nav-padding w3-hide-small">HOME</a>
+            <a href="./Introduction.html" class="w3-bar-item nav-padding w3-hide-small">INTRODUCTION</a>
+            <a href="./Contact us.html" class="w3-bar-item nav-padding w3-hide-small">CONTACT US</a>
+            <a href="./Login_Registration.html" class="w3-bar-item nav-padding w3-hide-small active">LOGIN/REGISTRATION</a>
+            <a href="./About us.html" class="w3-bar-item nav-padding w3-hide-small">ABOUT US</a>
+            <a href="./privacy_policy.html" class="w3-bar-item nav-padding w3-hide-small">PRIVACY POLICY</a>
+        </div>
+    </div>
+
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="./index.html" class="w3-bar-item w3-padding-large" onclick="myFunction()">HOME</a>
+        <a href="./Introduction.html" class="w3-bar-item w3-padding-large" onclick="myFunction()">INTRODUCTION</a>
+        <a href="./Contact us.html" class="w3-bar-item w3-padding-large" onclick="myFunction()">CONTACT US</a>
+        <a href="./Login_Registration.html" class="w3-bar-item w3-padding-large active"
+            onclick="myFunction()">LOGIN/REGISTRATION</a>
+        <a href="./About us.html" class="w3-bar-item w3-padding-large" onclick="myFunction()">ABOUT US</a>
+        <a href="./privacy_policy.html" class="w3-bar-item w3-padding-large" onclick="myFunction()">PRIVACY
+            POLICY</a>
+    </div>
+
+    <div class="image_home">
+        <div class="image_login">
+            <img class="contactus_image" src="./cover-login.png" alt="contact-image">
+            <h2 class="top-left">Experience the great road trip</h2>
+            <p class="mini-title">Book car in easy steps</p>
+        </div>
+    </div>
+
+    <div class="w3-content body_wrapper">
+        <div class="body_login_wrapper">
+            <div class="form_login">
+                <form name="myLoginForm" method="GET" onsubmit="return validateFormLogin()">
+                    <fieldset>
+                        <h2 class="center_heading">Login/Registration form</h2>
+                        <p>
+                            <label for="fname" class="required"><span class="logo_social_name"></span>First Name</label>
+                            <input class="w3-input" type="text" id="fname" name="fname" required>
+                        </p>
+                        <p>
+                            <label for="lname" class="required"><span class="logo_social_name"></span>Last Name</label>
+                            <input class="w3-input" type="text" id="lname" name="lname" required>
+                        </p>
+                        <p>
+                            <label for="email" class="required"><span class="logo_social_email1"></span>Email</label>
+                            <input class="w3-input" type="email" id="email" name="email" required>
+                        </p>
+                        <p>
+                            <label for="address" class="required"><span
+                                    class="logo_social_message"></span>Address</label>
+                            <textarea class="w3-input" id="address" name="address" required></textarea>
+                        </p>
+                        <div>
+                            <label class="required"><span class="logo_social_name"></span>Select Gender</label>
+                            <div class="gender_wraper" id="gender">
+                                <p class="radio_button_login">
+                                    <input type="radio" id="male" name="gender" value="Male" required>
+                                    <label for="male">Male</label>
+                                </p>
+                                <p class="radio_button_login">
+                                    <input type="radio" id="female" name="gender" value="Female">
+                                    <label for="female">Female</label>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="required"><span class="logo_social_methods"></span>Contact Methods</label>
+                            <div class="contact_method_wraper">
+                                <p class="checkbox_login">
+                                    <input type="checkbox" id="methodphone" name="option[]" value="phone">
+                                    <label for="methodphone">Phone</label>
+                                </p>
+                                <p class="checkbox_login">
+                                    <input type="checkbox" id="methodemail" name="option[]" value="email">
+                                    <label for="methodemail">Email</label>
+                                </p>
+                                <p class="checkbox_login">
+                                    <input type="checkbox" id="methodcall" name="option[]" value="call">
+                                    <label for="methodcall">Call</label>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="required"><span class="logo_social_education"></span>Choose Education</label>
+                            <div class="contact_method_wraper">
+                                <p class="checkbox_login">
+                                    <select name="education" id="education" multiple required>
+                                        <pre>
+                                        <option value="noschooling">No Schooling</option>
+                                         <option value="phd">Highschool</option>
+                                        <option value="degree">Degree</option>
+                                        <option value="masters">Masters</option>
+                                        <option value="phd">PhD</option>
+                                       </pre>
+                                    </select>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <input class="w3-button w3-input submit_button_contactus" type="submit" value="Submit">
+                            <input class="w3-button w3-input reset_button_contactus" type="reset" value="Reset">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <hr style="width:50%;text-align:left;margin-left:0">
+            <div class="login_content">
+                <h2><u>Other ways to reach us</u></h2>
+                <blockquote><p>Sometimes, the simplest approach is the best approach.Our <b>Contact us</b> page has a warm feeling.Our
+                    support staff is happy to assist you in all possible ways.
+                    Please fill out and submit the form above or below are the other ways you can get ib touch with us ,
+                    if
+                    you want
+                    to make a request for information. Our staff will
+                    be in
+                    touch with you soon.</p></blockquote>
+                <ul class="login_other">
+                    <address>
+                    <li>
+                        <div class="login_other_logos_email"></div><br>
+                        <b>Email-Id</b><br>
+                        <p><a href="mailto:japaneseculture@gmail.com">carzz.rental@gmail.com
+                            </a></p>
+                    </li>
+                    </address>
+                    <address>
+                    <li>
+                        <div class="login_other_logos_address"></div><br>
+                        <b>Address</b><br>
+                        <p>1920 E 2<sup>nd</sup><sub>St</sub>, Edmond, OK, 73034</p>
+                    </li>
+                    </address>
+                </ul>
+            </div>
+            <div class="external_content">
+                <img src="./food.png" alt="food">
+                <h2>Hey ! Are you really hunting for tasty South Indian Food ?</h2>
+                <p>Then you should definitely visit below link</p>
+                <a href="https://kusumasriponnam-2.kusuma-srisri.repl.co/index.html" target="_blank">Checkout here</a>
+            </div>
+
+            <div class="login_table">
+                <details>
+                <h2 class="price_heading">Simple, transparent pricing</h2>
+                    <summary><b><u>Our Transportation pricing</u></b></summary>
+                <table>
+                    <tr>
+                        <th>Car Name</th>
+                        <th>Distance Range</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Audi RS6</td>
+                        <td>Upto 450kms</td>
+                        <td>$120</td>
+                    </tr>
+                    <tr>
+                        <td>BMW i4</td>
+                        <td>Upto 500kms</td>
+                        <td>$105</td>
+                    </tr>
+                    <tr>
+                        <td>Ford F-150</td>
+                        <td>Upto 600kms</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>Chevrolet Silverado 1500</td>
+                        <td>Upto 550kms</td>
+                        <td>$95</td>
+                    </tr>
+                    <tr>
+                        <td>Honda CR-V</td>
+                        <td>Upto 600kms</td>
+                        <td>$90</td>
+                    </tr>
+                </table>
+                <p class="note_login"><i> Note : Price may vary depending on gas price and car market value</i></p>
+                </details>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
