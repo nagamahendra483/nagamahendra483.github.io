@@ -106,7 +106,7 @@ function setData() {
         xObj.open("GET", "data.json", false);
         xObj.onreadystatechange = () => {
             if (xObj.readyState === 4 && xObj.status === 200) {
-                sessionStorage.setItem("data", JSON.stringify(xObj.responseText));
+                sessionStorage.setItem("data", xObj.responseText);
             }
         };
         xObj.send(null);
