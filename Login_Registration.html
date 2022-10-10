@@ -11,19 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
-    <div class="w3-top">
-        <div class="w3-bar w3-card">
-            <a class="w3-bar-item nav-padding w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
-                onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-            <a class="logo" href="./index.html"><img src="./logo1.png" alt="logo"></a>
-            <a href="./index.html" class="w3-bar-item nav-padding w3-hide-small">HOME</a>
-            <a href="./Introduction.html" class="w3-bar-item nav-padding w3-hide-small">INTRODUCTION</a>
-            <a href="./Contact us.html" class="w3-bar-item nav-padding w3-hide-small">CONTACT US</a>
-            <a href="./Login_Registration.html" class="w3-bar-item nav-padding w3-hide-small active">LOGIN/REGISTRATION</a>
-            <a href="./About us.html" class="w3-bar-item nav-padding w3-hide-small">ABOUT US</a>
-            <a href="./privacy_policy.html" class="w3-bar-item nav-padding w3-hide-small">PRIVACY POLICY</a>
-        </div>
+<body onload="showBrandbar('LOGIN/REGISTRATION');">
+    <div class="w3-top" id="header_replacement"> 
     </div>
 
     <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">

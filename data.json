@@ -1,0 +1,26 @@
+[
+    {
+        "href" : "./index.html",
+        "name": "HOME"
+    },
+    {
+        "href" : "./Introduction.html",
+        "name": "INTRODUCTION"
+    },
+    {
+        "href" : "./Contact us.html",
+        "name": "CONTACT US"
+    },
+    {
+        "href" : "./Login_Registration.html",
+        "name": "LOGIN/REGISTRATION"
+    },
+    {
+        "href" : "./About us.html",
+        "name": "ABOUT US"
+    },
+    {
+        "href" : "./privacy_policy.html",
+        "name": "PRIVACY POLICY"
+    }
+]

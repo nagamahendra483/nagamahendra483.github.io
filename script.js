@@ -1,3 +1,4 @@
+var xObj = new XMLHttpRequest();
 function validateForm() {
     let name = document.forms["myForm"]["name"].value;
     let email = document.forms["myForm"]["email"].value;
@@ -19,8 +20,28 @@ function validateForm() {
         alert("Message field must be filled out");
         return false;
     }
+    sendData();
+
 }
 
+function sendData()
+ {
+    try{
+        const url = "http://dummy.com";
+        xObj.open(url, {
+            method : "POST",
+            body: new FormData(document.getElementById("myForm"))
+        });
+        xObj.onreadystatechange = () => {
+            console.log("done");
+        };
+        xObj.send(null);
+    } catch(err) {
+        console.log(err)
+    }  finally {
+        return true;
+    }
+ }
 function validateFormLogin() {
     let fname = document.forms["myLoginForm"]["fname"].value;
     let lname = document.forms["myLoginForm"]["lname"].value;
@@ -60,6 +81,66 @@ function validateFormLogin() {
         alert("Contact Method must be select");
         return false;
     }
+}
+
+function showBrandbar(val) {
+    if(!sessionStorage.getItem("data")) {
+       setData();
+    }
+    let res = "";
+    JSON.parse(sessionStorage.getItem("data")).forEach(function (item) {
+        res = res + `<a href="${item.href}" class="w3-bar-item nav-padding w3-hide-small ${ item.name == val  ? "active" : "" }">${item.name}</a>`
+      });
+    let data = `
+        <div class="w3-bar w3-card">
+            <a class="w3-bar-item nav-padding w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+                onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a class="logo" href="./index.html"><img src="./logo1.png" alt="logo"></a>
+            ${res}
+        </div>`;
+    document.getElementById("header_replacement").innerHTML = data;
+}
+
+function setData() {
+    try{
+        xObj.open("GET", "data.json", false);
+        xObj.onreadystatechange = () => {
+            if (xObj.readyState === 4 && xObj.status === 200) {
+                sessionStorage.setItem("data", JSON.stringify(xObj.responseText));
+            }
+        };
+        xObj.send(null);
+    } catch(rr) {
+        // set default when issue occurs
+        let data = [
+            {
+                "href" : "./index.html",
+                "name": "HOME"
+            },
+            {
+                "href" : "./Introduction.html",
+                "name": "INTRODUCTION"
+            },
+            {
+                "href" : "./Contact us.html",
+                "name": "CONTACT US"
+            },
+            {
+                "href" : "./Login_Registration.html",
+                "name": "LOGIN/REGISTRATION"
+            },
+            {
+                "href" : "./About us.html",
+                "name": "ABOUT US"
+            },
+            {
+                "href" : "./privacy_policy.html",
+                "name": "PRIVACY POLICY"
+            }
+        ];
+        sessionStorage.setItem("data", JSON.stringify(data))
+    }
+    
 }
 
 // Used to toggle the menu on small screens when clicking on the menu button
